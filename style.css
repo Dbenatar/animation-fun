@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: background-gradient 10s infinite ease-in;
+  background-color: aquamarine;
+  background: linear-gradient(-45deg, #da7070, #3542b4, #7ead41, #c00f3b);
+  background-size: 400% 400%;
+}
+
+@keyframes background-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  margin: 100px;
+  font-family: "Romanesco", cursive;
+  text-align: center;
+  text-decoration: underline;
+  animation: h1;
+}
+@keyframes text {
+  25% {
+    transform: scewY(90deg);
+  }
+  75% {
+    transform: scewY(270deg);
+  }
+}
+
+.square {
+  margin: 3rem;
+  background-color: red;
+  width: 400px;
+  height: 400px;
+  transform: skew(45deg 90deg);
+  border-radius: 40px 0 40px 0;
+  animation: scewY 10s ease-in-out infinite;
+}
+
+@keyframes scewY {
+  /* where does it begin  */
+  10%,
+  100% {
+    background: linear-gradient(-45deg, #da7070, #3542b4, #7ead41, #c00f3b);
+    transform: skewY(90deg);
+  }
+  50% {
+    background: linear-gradient(-45deg, #741b1b, #0a146d, #7cbe27, #f2416d);
+    transform: skewY(270deg);
+  }
+  /* Where does it go to  */
+}
